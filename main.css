@@ -1,0 +1,83 @@
+video#video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover; 
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('BebasNeue'), url('BebasNeue.otf') format('woff');
+}
+
+* {
+  font-family: 'BebasNeue';
+  color: white;
+}
+
+.centerContainer {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+#quoteText {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 30px;
+}
+
+#divider {
+  height: 5px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#logo {
+  width: 50%;
+}
+
+#membersList {
+  text-align: center;
+  margin-top: 30px;
+  overflow: hidden;
+  font-size: 35px;
+  height: calc(100% - 450px);
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0px;
+}
+
+#membersList:hover {
+  padding-right: 6px;
+  overflow: auto;
+  text-align:center;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.scrollbar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+}

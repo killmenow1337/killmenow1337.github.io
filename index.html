@@ -1,0 +1,110 @@
+
+<html>
+<SCRIPT language=JavaScript>
+
+var message="STOP";
+
+
+ function clickIE4(){
+   if (event.button==2){
+     alert(message);
+     return false;
+   }
+ }
+
+ function clickNS4(e){
+   if (document.layers||document.getElementById&&!document.all){
+     if (e.which==2||e.which==3){
+       alert(message);
+       return false;
+      }
+   }
+ }
+
+  if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=clickNS4;
+   }
+   else if (document.all&&!document.getElementById){
+      document.onmousedown=clickIE4;
+   }
+
+   document.oncontextmenu=new Function("alert(message);return false")
+</SCRIPT>
+<script language="JavaScript">
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+    document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+</script>
+<head>
+	<title>KILL.ME</title>
+	<link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" href="main.css" type="text/css" />
+	
+	<meta charset="UTF-8">
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript">
+$(document).ready(function(){
+    $(document).bind("contextmenu",function(e){
+        return false;
+    });
+});
+   </script>
+	
+</head>
+
+<body>
+    
+	<div class="centerContainer">
+		<div id="divider"></div>
+        		<a href=http://steamcommunity.com/groups/slowdiveboys>
+			<img id="logo" src="aha.png" />
+		</a>
+	</div>
+		
+		<div id="membersList" class="scrollbar">
+		<a href=>ZeRo</a> <br>
+                <a href=https://zerosense.github.io/>ZeRo$ense</a> <br>
+                <a href=>Snow</a> <br>
+		<a href=>KNERk</a> <br>
+		<a href=>tNX</a> <br>
+		<a href=>Midas</a> <br>
+		</div>
+		
+		
+		
+		<video autoplay loop id="video">
+		<source src="meme.mp4" type="video/mp4" 
+		</video>
+		
+		<script>
+			var video = document.currentScript.parentElement;
+			video.volume = 0.1;
+        </script>
+
+
+</body>
+
+
+</html>
+
